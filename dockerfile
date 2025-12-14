@@ -5,6 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copia la app Flutter Web ya compilada dentro de Docker
+# para ello ejecutar flutter build web --release
 COPY build/web /usr/share/nginx/html
 
 # Expone puerto 80 para HTTP
